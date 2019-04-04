@@ -1,0 +1,829 @@
+body {
+    margin: 0 auto;
+    background-color: #73869e;
+    font-family: "Arial", sans-serif;
+    letter-spacing: .1px;
+    line-height: 1.33em;
+}
+
+p {
+    font-size: 1.05em;
+}
+
+.centr {
+    text-align: center;
+}
+
+.wrappr {
+    margin-bottom: 3.3%;
+}
+
+.wrappr li {
+    font-size: .8em;
+}
+
+button {
+    background-color: rgb(41, 70, 106);
+    color: white;
+    width: 100%;
+    height: auto;
+    font-size: 1.6em;
+    padding: .8em;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    animation-name: shake;
+    animation-delay: 6s;
+    animation-duration: 1s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+button:hover {
+    background-color: rgb(53, 94, 134);
+}
+
+a {
+    color: #000;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: rgb(41, 70, 106);
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+strong {
+    text-align: right;
+}
+
+.wrapper {
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+.wrapper1 {
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+.border-section {
+    margin-top: -2%;
+    margin-bottom: 5%;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1.5%;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.border-section-2 {
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1.5%;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.test {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transform: translateY(-40%);
+}
+
+/* ----  Burger menu ---- */
+
+.header {
+    background-color: rgb(41, 70, 106);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    max-height: 4em;
+    z-index: 3;
+    top: 0;
+    border-bottom: solid white 2px;
+}
+
+.header ul {
+    background-color: rgb(41, 70, 106);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    font-size: .85em;
+}
+
+.header li a {
+    display: block;
+    text-transform: uppercase;
+    color: white;
+    padding: 20px 20px;
+    /*
+    border-right: 1px solid rgb(26, 119, 113); */
+    border-right: 1px solid #1d2d4d;
+    text-decoration: none;
+    letter-spacing: .7px;
+}
+
+.header .active {
+    background-color: #1d2d4d;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    /*
+    background-color: #f4f4f4; */
+    background-color: #1d2d4d;
+}
+
+.header .logo {
+    float: left;
+    text-decoration: none;
+    position: relative;
+    top: 5%;
+    transform: translateY(17%) translateX(3%);
+}
+
+.header .logo img {
+    width: 41%;
+    padding: .2em;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 400px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+section.upp {
+    margin-top: -4em;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+/* --- index.html --- */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.pic {
+    display: flex;
+    flex-direction: row;
+    padding: .1em;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.pic img {
+    width: 5.5%;
+    height: 5.5%;
+    margin-right: 1em;
+}
+
+h2 {
+    margin: 0;
+    color: rgb(41, 70, 106);
+}
+
+article section.knapper {
+    background-color: rgba(255, 0, 0, 0);
+    box-shadow: 0 0 0 0;
+    margin-top: -1em;
+    margin-bottom: .9em;
+}
+
+.knapper button {
+    width: 100%;
+}
+
+
+.centerheader {
+    text-align: center;
+    font-size: .9em;
+    padding: 1.7em;
+    color: #3a5983;
+    font-weight: 600;
+}
+
+.to {
+    color: rgba(41, 70, 106, 0.65);
+}
+
+
+.speech-bubble {
+    background-color: palevioletred;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    position: relative;
+    box-shadow: 0 0 0;
+    font-style: italic;
+    margin-bottom: 2.2em;
+}
+
+.speech-bubble div {
+    text-align: right;
+    color: rgb(226, 191, 202);
+    padding-top: .2em;
+    font-style: normal;
+}
+
+.speech-bubble p {
+    margin: .1em .7em;
+    font-size: .82em;
+}
+
+.speech-bubble div p {
+    margin-top: -.8em;
+}
+
+.speech-bubble p:last-of-type {
+    margin-bottom: 15px;
+}
+
+.speech-bubble::after {
+    border-left: 20px solid transparent;
+    border-top: 20px solid palevioletred;
+    bottom: -20px;
+    content: "";
+    position: absolute;
+    right: 20px;
+}
+
+/** Speech bubble with drop shadow and border */
+
+.speech-bubble-ds {
+    background: pink;
+    border: 1px solid #a7a7a7;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 0 auto 40px;
+    max-width: 400px;
+    position: relative;
+}
+
+.speech-bubble-ds p {
+    margin-bottom: 10px;
+}
+
+.speech-bubble-ds p:last-of-type {
+    margin-bottom: 0;
+}
+
+.speech-bubble-ds-arrow {
+    border-left: 21px solid transparent;
+    border-top: 20px solid rgba(0, 0, 0, 0.2);
+    bottom: -25px;
+    position: absolute;
+    right: 15px;
+}
+
+.speech-bubble-ds-arrow::before {
+    border-left: 23px solid transparent;
+    border-top: 23px solid #a7a7a7;
+    bottom: 2px;
+    content: "";
+    position: absolute;
+    right: 5px;
+}
+
+.speech-bubble-ds-arrow::after {
+    border-left: 21px solid transparent;
+    border-top: 21px solid #efefef;
+    bottom: 4px;
+    content: "";
+    position: absolute;
+    right: 6px;
+}
+
+.indexmain {
+    margin-top: -2em;
+    width: 85%;
+    height: auto;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.indexmain section {
+    width: 100%;
+    border-radius: 3px;
+    background-color: white;
+    padding: 1.7em;
+    padding-bottom: .5em;
+    font-size: 1.1em;
+    margin-bottom: 1.1em;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.indexmain section button {
+    margin-top: .2em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.aflys {
+    background-color: palevioletred;
+    animation-delay: 28s;
+    animation-timing-function: ease-in-out;
+}
+
+.aflys:hover {
+    background-color: rgba(219, 112, 147, 0.81);
+}
+
+.indexmain p {
+    color: black;
+}
+
+.top-image {
+    background-image: url(../images/tandlaege.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18em;
+    margin: 0;
+}
+
+#testem {
+    padding-bottom: 0;
+}
+
+
+/* --- Footer --- */
+
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding-left: 3%;
+}
+
+footer p {
+    font-size: .75rem;
+}
+
+footer section {
+    width: 100%;
+}
+
+footer section img {
+    float: right;
+    width: 75.4%;
+    width: 2em;
+    margin-right: 1.7em;
+    margin-top: .4em;
+}
+
+/* --- kontakt.html --- */
+
+.kontakt-image {
+    background-image: url(../images/IMG_2708.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18em;
+    margin: 0;
+}
+
+.flex-kontakt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ----  Klinikken ---- */
+
+.klinikken {
+    background-image: url(../images/udefra.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18em;
+    margin: 0;
+}
+
+.flexr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wrappr ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flexr li {
+    padding-bottom: 8%;
+}
+
+.flexr img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.flexr h2 {
+    background-color: white;
+    border: 1px solid #c4c4c4;
+    padding: 6%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.flexr h2 {
+    margin-top: .8em;
+}
+
+.meda ul {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.meda h2 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.meda img {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin-top: 1em;
+}
+
+.meda2 ul {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.meda2 h2 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.meda2 img {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin-top: 1em;
+}
+
+
+.meda {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    margin-top: 2%;
+    width: 100%;
+}
+
+.meda ul {
+    background-color: white;
+    border: 1px solid #c4c4c4;
+    padding: 6%;
+    list-style: none;
+}
+
+
+.meda2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    width: 100%;
+}
+
+.meda2 ul {
+    background-color: white;
+    border: 1px solid #c4c4c4;
+    padding: 6%;
+    list-style: none;
+}
+
+/* --- behandlinger.html --- */
+
+.behandlinger-image {
+    background-image: url(../images/priser.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18em;
+}
+
+li b {
+    font-size: 1.4em;
+}
+
+.behandlinger-h1 {
+    margin-top: 5%;
+}
+
+.behandlinger-icon {
+    float: left;
+    padding-top: 10px;
+    margin-right: 25px;
+
+}
+
+.grid-container p {
+    padding-left: 10%;
+    position: relative;
+    width: 500px;
+}
+
+.upp li img {
+    width: 9%;
+    margin-right: 1em;
+    margin-top: -2%;
+    border-radius: 0%;
+}
+
+.listr {
+    font-size: .8em;
+}
+
+/* --- BOOK TID --- */
+
+.book {
+    background-image: url(../images/book.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18em;
+    margin: 0;
+}
+
+.flextider {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.flextider p {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-right: -12em;
+}
+
+
+/* --- Media querys --- */
+
+@media (min-width: 700px) {
+
+    #testem {
+        padding-bottom: 2em;
+    }
+
+    .centerheader {
+        text-align: center;
+        font-size: 2.5em;
+        padding: 1.7em;
+        color: #ffffff;
+    }
+
+    .indexmain {
+        background-color: white;
+        margin-top: -6em;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        width: 100%;
+    }
+
+    .indexmain section {
+        border-radius: 0;
+        width: 30%;
+        box-shadow: 0 0 0 0;
+        margin-bottom: 0;
+    }
+
+    article section.knapper {
+        background-color: white;
+        padding-top: 1.85em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .speech-bubble {
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    .flexr {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .wrappr .flexr {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+    .wrappr {
+        margin-top: 3%;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+        margin-top: 6em;
+    }
+
+    .wrappr section {
+        width: 50%;
+    }
+
+    .wrappr li {
+        font-size: .85em;
+    }
+
+    section.upp {
+        margin: 0 auto;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .flex-kontakt {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .meda {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2%;
+        margin-top: 2%;
+        width: 25%;
+    }
+
+    .meda2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2%;
+        width: 25%;
+    }
+
+    .top-image {
+        margin-top: 2em;
+        height: 24em;
+    }
+
+    .klinikken {
+        height: auto;
+        width: 155%;
+        border: solid white 2em;
+    }
+
+    .kontakt-image {
+        height: auto;
+        width: 50%;
+        border: solid white 2em;
+    }
+
+    .book {
+        height: auto;
+        width: 155%;
+        border: solid white 2em;
+    }
+
+    .behandlinger-image {
+        height: auto;
+        width: 50%;
+        margin: 0;
+        border: solid white 2em;
+    }
+}
+
+@media (min-width: 900px) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}

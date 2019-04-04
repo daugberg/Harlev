@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="da-DK">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo-2.png">
+    <title>Tandlægehuset Harlev</title>
+    <meta name="description" content="Velkommen til Tandlægehuset Harlev. Vi byder kunder velkommen fra hele nærområdet, med professionelle behandlinger til fair priser.">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <style>
+        article {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        article section {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            border-radius: 3px;
+            padding-bottom: 0;
+            color: white;
+        }
+
+        section.break {
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 0;
+        }
+
+        section.break p {
+            color: white;
+            font-size: 1.1em;
+        }
+
+        section.break h2 {
+            color: white;
+        }
+
+
+        @media (min-width: 700px) {
+
+            article {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            article section {
+                width: 29.1%;
+            }
+
+            section.break {
+                border-radius: 0;
+                background-color: white;
+            }
+
+            section.break p {
+                color: black;
+                font-size: 1em;
+            }
+
+            section.break h2 {
+                color: rgb(41, 70, 106);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logowhite.png" alt="Tandlægehuset Harlev - Logo">
+        </a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="index.html" class="active">Forside</a></li>
+            <li><a href="behandlinger.html">Behandlinger</a></li>
+            <li><a href="om.html">Om Os</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="book.html" target="_blank">Book tid</a></li>
+        </ul>
+    </header>
+
+    <section class="border-section-2 top-image">
+    </section>
+
+    <div class="wrapper">
+        <main>
+            <article class="indexmain">
+                <section>
+                    <h2>Tandlægehuset Harlev</h2>
+                    <p>Gl. Stillingvej 423<br> 8462 Harlev J<br> info@tandlaegehuset.dk
+                        <br>
+                        <br>Telefon: 86942066<br>
+                    </p>
+                </section>
+                <section class="knapper">
+                    <button>
+                                <a href="book.html">Book tid</a>
+                            </button>
+                    <button class="aflys">
+                                <a href="book.html">Skift tid</a>
+                            </button>
+                </section>
+                <section class="break">
+                    <h2>Åbningstider</h2>
+                    <p>Mandag: 8.00 - 17.00
+                        <br>Tirsdag: 8.00 - 17.00
+                        <br>Onsdag: 8.00 - 16.00
+                        <br>Torsdag: 8.00 - 17.00
+                        <br>Fredag: 8.00 - 14.30
+                        <br></p>
+                </section>
+            </article>
+        </main>
+
+        <h2 class="centerheader">Velkommen til Tandlægehuset Harlev</h2>
+
+        <article>
+            <section>
+                <div class="pic">
+                    <img src="images/diplom.png" alt="Erfarne Tandlæger - Ikon">
+                    <h2>Erfarne tandlæger</h2>
+                </div>
+                <p>Vi går meget op i at vores tandlæger er erfarne og yderst profesionelle. Vores personale er meget passioneret, som elsker deres job og arbejdet med mennesker.</p>
+            </section>
+
+            <section>
+                <div class="pic">
+                    <img src="images/kanyle.png" alt="Ingen Smerte - Ikon">
+                    <h2>Ingen smerte</h2>
+                </div>
+                <p>Et besøg hos tandlægen skal aldrig være smertefuldt. Vi taler med dig inden en behandling, for at finde den passende mængde bedøvelse, og vi evaluerer løbende.</p>
+            </section>
+
+            <section>
+                <div class="pic">
+                    <img src="images/piggy.png" alt="Gode Priser - Ikon">
+                    <h2>Gode priser</h2>
+                </div>
+                <p>Vi har gode priser, og vi giver mulighed for at regningen kan deles op over tre gange. Vi har samarbejde med Sygeforsikring danmark, som også gør regningen billigere.</p>
+            </section>
+
+            <section>
+                <div class="pic">
+                    <img src="images/kunden.png" alt="Tid Til Kunden - Ikon">
+                    <h2>Tid til kunden</h2>
+                </div>
+                <p>Vi tager tiden til at snakke med dig, og har du tandlægeskræk eller spørgsmål i forbindelse med behandlingen, tager vi tålmodigt hånd om dine behov.</p>
+            </section>
+
+            <section>
+                <div class="pic">
+                    <img src="images/udstyr.png" alt="Kvalitets Redskaber - Ikon">
+                    <h2>Kvalitetsredskaber</h2>
+                </div>
+                <p>Vi sørger for at vores redskaber og udstyr er i top stand og af høj kvalitet. Ligeledes er materialerne af høj kvalitet, så vi sikrer at du får en behandling, som holder længe.</p>
+            </section>
+            <section>
+                <div class="pic">
+                    <img src="images/fear.png" alt="Hygiejne - Ikon">
+                    <h2>Tandlægeskræk?</h2>
+                </div>
+                <p>Vi har mange års erfaring med tandlægeskræk. Tandlæge Mads Gaardmand har tidligere arbejdet tre år i Aarhus' førende tandlæge indenfor netop tandlægeskræk.</p>
+            </section>
+        </article>
+
+        <h2 class="centerheader to">Hvad siger patienterne om os?</h2>
+
+        <article id="testem">
+            <section class="speech-bubble">
+                <p>"Jeg er kommet i tandlægehuset Harlev i 23 år. Selv da jeg flyttede fra Harlev og boede 7 år i Galten beholdt jeg Mads Gaardmand som tandlæge. Han arbejder altid hurtigt uden man mærker noget."
+                </p>
+                <div>
+                    <p>Kaj H.</p>
+                </div>
+            </section>
+
+            <section class="speech-bubble">
+                <p>"Jeg kan varmt anbefale Dorthe, og hele hendes team. Pga. tandlægeskræk havde jeg ikke været til tandlæge siden det sidste tjek på skolen som 17 årig – 5 år siden - men der var stor forståelse."</p>
+                <div>
+                    <p>Rigmor S.</p>
+                </div>
+            </section>
+
+        </article>
+    </div>
+    <!-- Wrapper end -->
+    <br>
+    <footer>
+        <section>
+            <p>Copyright © 2019</p>
+        </section>
+        <section class="footimg"><a href="http://www.facebook.com"><img src="images/fb_white.png" alt="Facebook"></a></section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;}
+	.st2{font-family:'MyriadPro-Regular';}
+	.st3{font-size:12px;}
+</style>
+<g>
+	<path class="st0" d="M1.9,49.5c-0.9,0-1.7-2.3-1.7-5.1V5.6c0-2.8,0.8-5.1,1.7-5.1h46.3c0.9,0,1.7,2.3,1.7,5.1v38.8
+		c0,2.8-0.8,5.1-1.7,5.1C48.1,49.5,1.9,49.5,1.9,49.5z"/>
+	<path d="M48.1,1c0.8,0,1.5,2.1,1.5,4.6v38.8c0,2.5-0.7,4.6-1.5,4.6H1.9c-0.8,0-1.5-2.1-1.5-4.6V5.6C0.3,3.1,1,1,1.9,1H48.1 M48.1,0
+		H1.9C0.8,0,0,2.5,0,5.6v38.8C0,47.5,0.8,50,1.9,50h46.3c1,0,1.9-2.5,1.9-5.6V5.6C50,2.5,49.2,0,48.1,0L48.1,0z"/>
+</g>
+<rect x="11" y="18" class="st1" width="114" height="10"/>
+<rect x="9" y="4.4" class="st1" width="37.6" height="42.1"/>
+<text transform="matrix(1 0 0 1 9 12.895)"><tspan x="0" y="0" class="st2 st3">Place</tspan><tspan x="0" y="14.4" class="st2 st3">Holder</tspan><tspan x="0" y="28.8" class="st2 st3">Image</tspan></text>
+</svg>
